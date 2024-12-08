@@ -14,7 +14,7 @@ const Footer = () => {
             <span className="text-[#FF9F0D]">St</span>ill You Need Our Support?
           </h2>
           <p className="text-sm mt-2">
-            Don't wait make a smart & logical quote here. It's pretty easy.
+            Dont wait make a smart & logical quote here. Its pretty easy.
           </p>
         </div>
         <div className="mt-4 md:mt-0">
@@ -38,8 +38,8 @@ const Footer = () => {
           <h3 className="text-lg font-bold">About Us</h3>
           <p className="mt-4 text-sm">
             Corporate clients and leisure travelers have been relying on
-            Groundlink for dependable, safe, and professional chauffeured car
-            service in major cities across the world.
+            Groundlink for dependable safe and professional chauffeured car
+            service in major cities across the world
           </p>
           <div className="mt-4">
             <h4 className="font-semibold">Opening Hours</h4>
@@ -106,7 +106,7 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="container mx-auto px-4 mt-8 text-center border-t border-gray-700 pt-4">
         <p className="text-sm">
-          Copyright © 2022 by Ayeman. All Rights Reserved.
+          Copyright © 2022 by Ayeman All Rights Reserved.
         </p>
       </div>
     </footer>

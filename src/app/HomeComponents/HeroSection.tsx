@@ -42,7 +42,7 @@ export default function HeroSection() {
     <section className="flex flex-col-reverse lg:flex-row justify-between items-center px-6 lg:px-10  lg:py-10">
       {/* Text Content */}
       <div className="max-w-lg text-center lg:text-left">
-        <h2 className="text-[#FF9F0D] text-lg font-semibold mb-2">It's Quick & Charming!</h2>
+        <h2 className="text-[#FF9F0D] text-lg font-semibold mb-2">Its Quick & Charming!</h2>
         <h1 className="text-3xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-snug">
           <span className="text-[#FF9F0D]">Th</span>e Art of Speed Food Quality
         </h1>

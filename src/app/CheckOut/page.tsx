@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../Navbar'
-import Main from './Main'
+import Checkout from './CheckOut'
 import Footer from '../HomeComponents/Footer'
 
 const page = () => {
@@ -8,12 +8,11 @@ const page = () => {
     <div>
       <Navbar/>
       <div className='bg-black'>
-      <h1 className='font-bold text-white  text-5xl text-center p-12'>Our Shop</h1></div>
-      <Main/>
+      <h1 className='font-bold text-white text-5xl text-center p-12'>CheckOut Page</h1></div>
+      <Checkout/>
       <Footer/>
     </div>
   )
 }
 
 export default page
-

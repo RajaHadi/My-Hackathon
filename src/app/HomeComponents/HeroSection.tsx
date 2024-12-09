@@ -20,7 +20,7 @@ export default function HeroSection() {
         <ul className="flex flex-wrap justify-center space-x-4 md:space-x-6">
           <li><a href="#home" className="hover:text-yellow-400">Home</a></li>
           <li><Link href={"../Menu"} className="hover:text-yellow-400">Menu</Link></li>
-          <li><Link href={""} className="hover:text-yellow-400">Blog</Link></li>
+          <li><Link href={"../Blog"} className="hover:text-yellow-400">Blog</Link></li>
           <li><Link href={"../About"} className="hover:text-yellow-400">About</Link></li>
           <li><Link href={"../Shop"} className="hover:text-yellow-400">Shop</Link></li>
           <li><a href="#contact" className="hover:text-yellow-400">Contact</a></li>
@@ -33,9 +33,9 @@ export default function HeroSection() {
             placeholder="Search..."
             className="px-4 py-2 rounded-full bg-gray-800 text-gray-300 border-2 border-[#FF9F0D] focus:ring-2 focus:ring-yellow-400 focus:outline-none"
           />
-          <button className="text-yellow-400 hover:text-yellow-500">
+          <Link href={"../CheckOut"} className="text-yellow-400 hover:text-yellow-500">
             <Image src={HandBag} width={24} height={24} alt="no" />
-          </button>
+          </Link>
         </div>
       </div>
     </nav>

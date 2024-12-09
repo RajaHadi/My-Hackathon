@@ -10,7 +10,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo Section */}
           <div className="text-3xl font-bold">
-            <span className="text-[#FF9F0D]">Food</span>tuck
+            Food<span className="text-[#FF9F0D]">tuck</span>
           </div>
   
           {/* Hamburger Menu for Small Screens */}
@@ -22,11 +22,11 @@ const Navbar = () => {
   
           {/* Navbar Links (Hidden on Small Screens) */}
           <ul className="hidden lg:flex space-x-6 text-lg">
-            <li><a href="#home" className="hover:text-[#FF9F0D]">Home</a></li>
+            <li><a href="#home" className="hover:text-[#FF9F0D] text-[#FF9F0D]">Home</a></li>
             <li><a href="../Menu" className="hover:text-[#FF9F0D]">Menu</a></li>
-            <li><a href="" className="hover:text-[#FF9F0D]">Blog</a></li>
+            <li><a href="../Blog" className="hover:text-[#FF9F0D]">Blog</a></li>
             <li><a href="../About" className="hover:text-[#FF9F0D]">About</a></li>
-            <li><a href="#shop" className="hover:text-[#FF9F0D]">Shop</a></li>
+            <li><a href="../Shop" className="hover:text-[#FF9F0D]">Shop</a></li>
             <li><a href="#contact" className="hover:text-[#FF9F0D]">Contact</a></li>
           </ul>
   
@@ -34,7 +34,7 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <Link href={""}><Image src={N1} alt="no" width={24} height={24} /></Link>
             <Link href={""}><Image src={N2} alt="no" width={24} height={24} /></Link>
-            <Link href={""}><Image src={N3} alt="no" width={24} height={24} /></Link>
+            <Link href={"../CheckOut"}><Image src={N3} alt="no" width={24} height={24} /></Link>
           </div>
         </div>
   
@@ -43,7 +43,7 @@ const Navbar = () => {
           <ul className="flex flex-col space-y-4 text-lg">
             <li><a href="#home" className="hover:text-[#FF9F0D]">Home</a></li>
             <li><a href="../Menu" className="hover:text-[#FF9F0D]">Menu</a></li>
-            <li><a href="#blog" className="hover:text-[#FF9F0D]">Blog</a></li>
+            <li><a href="../Blog" className="hover:text-[#FF9F0D]">Blog</a></li>
             <li><a href="#about" className="hover:text-[#FF9F0D]">About</a></li>
             <li><a href="#shop" className="hover:text-[#FF9F0D]">Shop</a></li>
             <li><a href="#contact" className="hover:text-[#FF9F0D]">Contact</a></li>
@@ -51,7 +51,7 @@ const Navbar = () => {
           <div className="flex items-center space-x-4 mt-4">
             <Link href={""}><Image src={N1} alt="no" width={24} height={24} /></Link>
             <Link href={""}><Image src={N2} alt="no" width={24} height={24} /></Link>
-            <Link href={""}><Image src={N3} alt="no" width={24} height={24} /></Link>
+            <Link href={"../CheckOut"}><Image src={N3} alt="no" width={24} height={24} /></Link>
           </div>
         </div>
       </nav>

@@ -1,7 +1,7 @@
 import React from "react";
 export default function FoodMenu() {
   return (
-    <div className="p-6 pt-12 max-w-4xl mx-auto">
+    <div className="p-6 py-12 max-w-4xl mx-auto">
       {/* Header */}
       <h1 className="text-5xl font-bold text-center mb-4">Our Food Menu</h1>
       <p className="text-center text-gray-500 mb-6">

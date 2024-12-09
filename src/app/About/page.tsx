@@ -12,6 +12,8 @@ const page = () => {
   return (
     <div>
       <Navbar/>
+      <div className='bg-black'>
+      <h1 className='font-bold text-white text-5xl text-center p-12'>About Us</h1></div>
       <About/>
       <Image src={Img} alt='No' className='py-8'/>
       <TeamMember/>

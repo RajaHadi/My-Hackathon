@@ -9,15 +9,17 @@ import Testimonial from "./HomeComponents/Testimonial";
 import RC from "../../public/Restraind creative Process.png"
 import Blog from "./HomeComponents/Blog";
 import Footer from "./HomeComponents/Footer";
+import Menu from "./HomeComponents/Choose";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-14">
+    <div className="flex bg-black flex-col gap-14">
    <HeroSection/>
    <AboutUs/>
    <FoodCategory/>
    <ChooseUs/>
    <QualityPoints/>
+   <Menu/>
    <Chef/>
    <Testimonial/>
    <Image src={RC} alt="no" className="pt-10"/>

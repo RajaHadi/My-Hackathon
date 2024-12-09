@@ -2,6 +2,8 @@
 import Image from "next/image";
 import HandBag from "../../../public/NavbarIcons/Handbag.png"
 import HeaderHero from "../../../public/HeaderHeroImage/Image.png"
+import Link from "next/link";
+
 export default function HeroSection() {
   return (
     <div className="bg-black text-white min-h-screen flex flex-col">
@@ -17,10 +19,10 @@ export default function HeroSection() {
         {/* All Menu Links */}
         <ul className="flex flex-wrap justify-center space-x-4 md:space-x-6">
           <li><a href="#home" className="hover:text-yellow-400">Home</a></li>
-          <li><a href="#menu" className="hover:text-yellow-400">Menu</a></li>
-          <li><a href="#blog" className="hover:text-yellow-400">Blog</a></li>
-          <li><a href="#about" className="hover:text-yellow-400">About</a></li>
-          <li><a href="#shop" className="hover:text-yellow-400">Shop</a></li>
+          <li><Link href={"../Menu"} className="hover:text-yellow-400">Menu</Link></li>
+          <li><Link href={""} className="hover:text-yellow-400">Blog</Link></li>
+          <li><Link href={"../About"} className="hover:text-yellow-400">About</Link></li>
+          <li><Link href={"../Shop"} className="hover:text-yellow-400">Shop</Link></li>
           <li><a href="#contact" className="hover:text-yellow-400">Contact</a></li>
         </ul>
   

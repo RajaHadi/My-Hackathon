@@ -19,7 +19,7 @@ export default function Home() {
    <FoodCategory/>
    <ChooseUs/>
    <QualityPoints/>
-   <Menu/>
+   
    <Chef/>
    <Testimonial/>
    <Image src={RC} alt="no" className="pt-10"/>

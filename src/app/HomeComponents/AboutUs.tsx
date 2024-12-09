@@ -6,7 +6,7 @@ import Image3 from "../../../public/AboutUsImages/unsplash_mAQZ3X_8_l0.png"
 const AboutUs = () => {
   return (
     <div className='pb-6'>
-  <section className="flex flex-col-reverse lg:flex-row justify-between items-center px-6 lg:px-10 py-10 lg:py-20">
+  <section className="flex flex-col-reverse lg:flex-row text-white justify-between items-center px-6 lg:px-10 py-10 lg:py-20">
     {/* Text Content */}
     <div className="max-w-lg text-center lg:text-left">
       <h2 className="text-[#FF9F0D] text-lg font-semibold mb-2">About us</h2>

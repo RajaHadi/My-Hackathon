@@ -7,7 +7,7 @@ import img4 from "../../../public/FoodCategoryImg/unsplash_q54Oxq44MZs.png";
 
 const FoodCategory = () => {
   return (
-    <div className="flex flex-col items-center px-6 lg:px-10  lg:py-20">
+    <div className="flex flex-col text-white items-center px-6 lg:px-10  lg:py-20">
     {/* Title Section */}
     <h2 className="text-[#FF9F0D] text-lg font-semibold mb-2">
       Food Category

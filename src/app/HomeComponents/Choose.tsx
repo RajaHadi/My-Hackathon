@@ -31,7 +31,7 @@ const Menu = () => {
             <img
               src={item.image}
               alt={item.name}
-              className="h-32 w-32 rounded-full mb-4"
+              className="h-32 w-32 text-white rounded-full mb-4"
             />
             <h2 className="text-xl font-bold">{item.name}</h2>
             <p className="text-gray-400 text-center text-sm mt-2">{item.description}</p>

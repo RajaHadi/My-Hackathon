@@ -8,7 +8,7 @@ const Testimonial = () => {
     return (
       <div>
         {/* Title Section */}
-        <div className="sm:text-center pl-6 lg:text-left">
+        <div className="sm:text-center text-white pl-6 lg:text-left">
           <h1 className="font-normal pt-10 text-[32px] text-[#FF9F0D]">Testimonials</h1>
           <h2 className="font-bold text-5xl">What our clients are saying</h2>
         </div>

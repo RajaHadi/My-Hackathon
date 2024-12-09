@@ -6,7 +6,7 @@ import Q3 from "../../../public/Quality/Group (3).png"
 import Q4 from "../../../public/Quality/Group (4).png"
 const QualityPoints = () => {
   return (
-    <div className='flex flex-wrap  justify-around gap-6 px-4'>
+    <div className='flex flex-wrap text-white justify-around gap-6 px-4'>
       <div className='flex flex-col items-center text-center'>
         <Image src={Q1} alt='no' height={120} width={120} className='pb-2' />
         <p className='font-bold text-[24px]'>Professional Chefs</p>

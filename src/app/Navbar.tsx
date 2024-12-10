@@ -41,12 +41,12 @@ const Navbar = () => {
         {/* Mobile Menu */}
         <div className="lg:hidden mt-4">
           <ul className="flex flex-col space-y-4 text-lg">
-            <li><a href="#home" className="hover:text-[#FF9F0D]">Home</a></li>
-            <li><a href="../Menu" className="hover:text-[#FF9F0D]">Menu</a></li>
-            <li><a href="../Blog" className="hover:text-[#FF9F0D]">Blog</a></li>
-            <li><a href="#about" className="hover:text-[#FF9F0D]">About</a></li>
-            <li><a href="#shop" className="hover:text-[#FF9F0D]">Shop</a></li>
-            <li><a href="#contact" className="hover:text-[#FF9F0D]">Contact</a></li>
+            <li><Link href="#home" className="hover:text-[#FF9F0D]">Home</Link></li>
+            <li><Link href="../Menu" className="hover:text-[#FF9F0D]">Menu</Link></li>
+            <li><Link href="../Blog" className="hover:text-[#FF9F0D]">Blog</Link></li>
+            <li><Link href="../about" className="hover:text-[#FF9F0D]">About</Link></li>
+            <li><Link href="../shop" className="hover:text-[#FF9F0D]">Shop</Link></li>
+            <li><Link href="#contact" className="hover:text-[#FF9F0D]">Contact</Link></li>
           </ul>
           <div className="flex items-center space-x-4 mt-4">
             <Link href={""}><Image src={N1} alt="no" width={24} height={24} /></Link>

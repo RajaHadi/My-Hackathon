@@ -15,7 +15,7 @@ export default function HeroSection() {
       </div>
   
       {/* Navbar Links */}
-      <div className="flex flex-col md:flex-row items-center justify-between px-6 md:px-8 py-10">
+      <div className="flex  md:flex-row items-center justify-between px-6 md:px-8 py-10">
         {/* All Menu Links */}
         <ul className="flex flex-wrap justify-center space-x-4 md:space-x-6">
           <li><a href="#home" className="hover:text-yellow-400">Home</a></li>

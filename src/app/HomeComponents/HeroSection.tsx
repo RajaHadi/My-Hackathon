@@ -1,4 +1,4 @@
-// components/HeroSection.js
+
 import Image from "next/image";
 import HandBag from "../../../public/NavbarIcons/Handbag.png"
 import HeaderHero from "../../../public/HeaderHeroImage/Image.png"

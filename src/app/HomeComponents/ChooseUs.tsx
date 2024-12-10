@@ -45,7 +45,7 @@ const ChooseUs = () => {
           <Image src={cookie} alt='o' width={56} height={56} />
         </div>
       </div>
-      <div className='w-[355px] h-[93px] rounded-md flex justify-around items-center bg-white'>
+      <div className='md:w-[355px] sm:w-[320px] h-[93px] rounded-md flex justify-around items-center bg-white'>
         <p className='font-bold text-[48px] text-[#FF9F0D]'>30+</p>
         <p className='font-bold text-[24px] text-[#1E1E1E]'>Years of <br />Experience</p>
       </div>

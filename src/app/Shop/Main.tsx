@@ -11,22 +11,22 @@ const Main = () => {
   return (
     <div className="min-h-screen mt-14 bg-gray-100 p-4">
       {/* Header with Sort By and Show */}
-      <header className="flex items-center justify-start space-x-4 mb-4">
-        <select className="p-2 border rounded-md">
+      <header className="flex flex-wrap items-center justify-start space-x-4 space-y-2 md:space-y-0 mb-4">
+        <select className="p-2 border rounded-md w-full md:w-auto">
           <option>Sort By: Newest</option>
           <option>Sort By: Price</option>
           <option>Sort By: Popular</option>
         </select>
-        <select className="p-2 border rounded-md">
+        <select className="p-2 border rounded-md w-full md:w-auto">
           <option>Show: Default</option>
           <option>Show: Highest Rated</option>
         </select>
       </header>
 
       {/* Main Content */}
-      <div className="flex">
+      <div className="flex flex-wrap">
         {/* Products Section */}
-        <div className="w-3/4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="w-full lg:w-3/4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {/* Product 1 */}
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
             <Image
@@ -40,6 +40,73 @@ const Main = () => {
             </div>
           </div>
           {/* Product 2 */}
+          <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <Image
+              src={I2}
+              alt="Chocolate Muffin"
+              className="w-full h-40 object-cover"
+            />
+            <div className="p-4">
+              <h3 className="text-lg font-bold">Chocolate Muffin</h3>
+              <p className="text-[#FF9F0D]">$4.00</p>
+            </div>
+          </div>
+          {/* Product 3 */}
+          <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <Image
+              src={I3}
+              alt="Chocolate Muffin"
+              className="w-full h-40 object-cover"
+            />
+            <div className="p-4">
+              <h3 className="text-lg font-bold">Chocolate Muffin</h3>
+              <p className="text-[#FF9F0D]">$4.00</p>
+            </div>
+          </div>
+          <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <Image
+              src={I4}
+              alt="Chocolate Muffin"
+              className="w-full h-40 object-cover"
+            />
+            <div className="p-4">
+              <h3 className="text-lg font-bold">Chocolate Muffin</h3>
+              <p className="text-[#FF9F0D]">$4.00</p>
+            </div>
+          </div>
+          <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <Image
+              src={I5}
+              alt="Chocolate Muffin"
+              className="w-full h-40 object-cover"
+            />
+            <div className="p-4">
+              <h3 className="text-lg font-bold">Chocolate Muffin</h3>
+              <p className="text-[#FF9F0D]">$4.00</p>
+            </div>
+          </div>
+          <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <Image
+              src={I6}
+              alt="Chocolate Muffin"
+              className="w-full h-40 object-cover"
+            />
+            <div className="p-4">
+              <h3 className="text-lg font-bold">Chocolate Muffin</h3>
+              <p className="text-[#FF9F0D]">$4.00</p>
+            </div>
+          </div>
+          <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <Image
+              src={I1}
+              alt="Chocolate Muffin"
+              className="w-full h-40 object-cover"
+            />
+            <div className="p-4">
+              <h3 className="text-lg font-bold">Chocolate Muffin</h3>
+              <p className="text-[#FF9F0D]">$4.00</p>
+            </div>
+          </div>
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
             <Image
               src={I2}
@@ -96,29 +163,7 @@ const Main = () => {
             </div>
           </div>
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
-          <Image
-              src={I1}
-              alt="Chocolate Muffin"
-              className="w-full h-40 object-cover"
-            />
-            <div className="p-4">
-              <h3 className="text-lg font-bold">Chocolate Muffin</h3>
-              <p className="text-[#FF9F0D]">$4.00</p>
-            </div>
-          </div>
-          <div className="bg-white rounded-lg shadow-md overflow-hidden">
-          <Image
-              src={I2}
-              alt="Chocolate Muffin"
-              className="w-full h-40 object-cover"
-            />
-            <div className="p-4">
-              <h3 className="text-lg font-bold">Chocolate Muffin</h3>
-              <p className="text-[#FF9F0D]">$4.00</p>
-            </div>
-          </div>
-          <div className="bg-white rounded-lg shadow-md overflow-hidden">
-          <Image
+            <Image
               src={I3}
               alt="Chocolate Muffin"
               className="w-full h-40 object-cover"
@@ -129,53 +174,7 @@ const Main = () => {
             </div>
           </div>
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
-          <Image
-              src={I4
-
-              }
-              alt="Chocolate Muffin"
-              className="w-full h-40 object-cover"
-            />
-            <div className="p-4">
-              <h3 className="text-lg font-bold">Chocolate Muffin</h3>
-              <p className="text-[#FF9F0D]">$4.00</p>
-            </div>
-          </div>
-          <div className="bg-white rounded-lg shadow-md overflow-hidden">
-           <Image
-              src={I5}
-              alt="Chocolate Muffin"
-              className="w-full h-40 object-cover"
-            />
-            <div className="p-4">
-              <h3 className="text-lg font-bold">Chocolate Muffin</h3>
-              <p className="text-[#FF9F0D]">$4.00</p>
-            </div>
-          </div>
-          <div className="bg-white rounded-lg shadow-md overflow-hidden">
-          <Image
-              src={I6}
-              alt="Chocolate Muffin"
-              className="w-full h-40 object-cover"
-            />
-            <div className="p-4">
-              <h3 className="text-lg font-bold">Chocolate Muffin</h3>
-              <p className="text-[#FF9F0D]">$4.00</p>
-            </div>
-          </div>
-          <div className="bg-white rounded-lg shadow-md overflow-hidden">
-          <Image
-              src={I3}
-              alt="Chocolate Muffin"
-              className="w-full h-40 object-cover"
-            />
-            <div className="p-4">
-              <h3 className="text-lg font-bold">Chocolate Muffin</h3>
-              <p className="text-[#FF9F0D]">$4.00</p>
-            </div>
-          </div>
-          <div className="bg-white rounded-lg shadow-md overflow-hidden">
-          <Image
+            <Image
               src={I2}
               alt="Chocolate Muffin"
               className="w-full h-40 object-cover"
@@ -186,7 +185,7 @@ const Main = () => {
             </div>
           </div>
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
-          <Image
+            <Image
               src={I1}
               alt="Chocolate Muffin"
               className="w-full h-40 object-cover"
@@ -196,11 +195,11 @@ const Main = () => {
               <p className="text-[#FF9F0D]">$4.00</p>
             </div>
           </div>
-          {/* Add more products as needed */}
+          {/* Repeat for all other products */}
         </div>
 
         {/* Sidebar */}
-        <aside className="w-1/4 pl-4">
+        <aside className="w-full lg:w-1/4 lg:pl-4 mt-4 lg:mt-0">
           {/* Search */}
           <div className="mb-4 mt-3">
             <input
@@ -266,7 +265,7 @@ const Main = () => {
           {/* Latest Products */}
           <div className="mb-4">
             <h2 className="text-[20px] font-bold mb-2">Latest Products</h2>
-            <ul className=" flex flex-col gap-4 space-y-2">
+            <ul className="flex flex-col gap-4 space-y-2">
               <li>
                 <p className="text-gray-700">Pizza - $12.00</p>
               </li>
@@ -306,3 +305,4 @@ const Main = () => {
 };
 
 export default Main;
+

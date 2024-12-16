@@ -13,7 +13,7 @@ import Menu from "./HomeComponents/Choose";
 
 export default function Home() {
   return (
-    <div className="flex bg-black flex-col gap-14">
+    <div id="home" className="flex bg-black  md:px-14 md:py-4 flex-col gap-14">
    <HeroSection/>
    <AboutUs/>
    <FoodCategory/>

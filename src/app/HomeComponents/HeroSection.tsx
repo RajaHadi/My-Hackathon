@@ -10,7 +10,7 @@ export default function HeroSection() {
     {/* Navbar */}
     <nav className="relative bg-black text-white">
       {/* Centered Logo - Separate Section */}
-      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 text-2xl  md:text-3xl font-bold py-2 pb-10">
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 text-2xl  md:text-3xl font-bold py-2 pb-8">
         <span className="text-[#FF9F0D]">Food</span>tuck
       </div>
   
@@ -18,11 +18,13 @@ export default function HeroSection() {
       <div className="flex flex-col md:flex-row items-center justify-between pt-16 px-6 md:px-8 py-10">
         {/* All Menu Links */}
         <ul className="flex flex-wrap justify-center space-x-4 md:space-x-6">
-          <li><a href="#home" className="hover:text-yellow-400">Home</a></li>
+          <li><Link href="/" className="hover:text-yellow-400">Home</Link></li>
           <li><Link href={"../Menu"} className="hover:text-yellow-400">Menu</Link></li>
           <li><Link href={"../Blog"} className="hover:text-yellow-400">Blog</Link></li>
+          <li><Link href={""} className="hover:text-yellow-400">Pages</Link></li>
           <li><Link href={"../About"} className="hover:text-yellow-400">About</Link></li>
           <li><Link href={"../Shop"} className="hover:text-yellow-400">Shop</Link></li>
+        
           <li><a href="#contact" className="hover:text-yellow-400">Contact</a></li>
         </ul>
   

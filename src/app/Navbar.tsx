@@ -50,7 +50,7 @@ const Navbar = () => {
         {/* Navbar Links (Hidden on Small Screens) */}
         <ul className="hidden lg:flex space-x-6 text-lg">
           <li>
-            <Link href="#home" className="hover:text-[#FF9F0D] text-[#FF9F0D]">
+            <Link href="/" className="hover:text-[#FF9F0D] text-[#FF9F0D]">
               Home
             </Link>
           </li>
@@ -100,7 +100,7 @@ const Navbar = () => {
         <div className="lg:hidden mt-4">
           <ul className="flex flex-col space-y-4 text-lg">
             <li>
-              <Link href="#home" className="hover:text-[#FF9F0D]">
+              <Link href="/" className="hover:text-[#FF9F0D]">
                 Home
               </Link>
             </li>

@@ -8,7 +8,7 @@ const Blog = () => {
     return (
       <div className="flex flex-col text-white px-6 items-center gap-6">
         {/* Heading */}
-        <h1 className="font-normal text-[32px] text-[#FF9F0D] ">Blog Post</h1>
+        <h1 className="font-normal font-greatVibes text-[32px] text-[#FF9F0D] ">Blog Post</h1>
         <h2 className="font-bold text-[32px] sm:text-[48px] text-center">
           <span className="text-[#FF9F0D]">La</span>test News and Blog
         </h2>

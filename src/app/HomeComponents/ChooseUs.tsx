@@ -27,7 +27,7 @@ const ChooseUs = () => {
       </div>
     </div>
     <div className="max-w-lg text-center lg:pl-10 lg:text-left mt-10 lg:mt-0">
-      <h2 className="text-[#FF9F0D] text-[32px] font-semibold mb-2">Why choose us</h2>
+      <h2 className="text-[#FF9F0D] text-[32px] font-greatVibes font-normal mb-2">Why choose us</h2>
       <h1 className="text-3xl md:text-5xl lg:text-[48px] font-bold leading-tight lg:leading-snug">
         <span className="text-[#FF9F0D]">Ex</span>traordinary taste and Experienced
       </h1>

@@ -8,7 +8,7 @@ import Chef4 from "../../../public/ChefImg/Chef Card 1 (1).png"
 const Chef = () => {
   return (
     <div className='flex flex-col text-white pb-5 items-center'>
-      <h1 className='font-normal text-[#FF9F0D] text-[32px]'>Chef</h1>
+      <h1 className='font-normal font-greatVibes  text-[#FF9F0D] text-[32px]'>Chef</h1>
       <h2 className='font-bold text-3xl sm:text-4xl md:text-5xl pb-10'>
         <span className='text-[#FF9F0D]'>Me</span>et Our Chef
       </h2>

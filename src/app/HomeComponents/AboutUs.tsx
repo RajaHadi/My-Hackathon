@@ -9,7 +9,7 @@ const AboutUs = () => {
   <section className="flex flex-col-reverse lg:flex-row text-white justify-between items-center px-6 lg:px-10 py-10 lg:py-20">
     {/* Text Content */}
     <div className="max-w-lg text-center lg:text-left">
-      <h2 className="text-[#FF9F0D] text-lg font-semibold mb-2">About us</h2>
+      <h2 className="text-[#FF9F0D] text-[32px] font-greatVibes font-normal mb-2">About us</h2>
       <h1 className="text-3xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-snug">
         <span className="text-[#FF9F0D]">We</span> Create the Best Food Product
       </h1>

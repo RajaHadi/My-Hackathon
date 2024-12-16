@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Great_Vibes } from "next/font/google";
 import "./globals.css";
+const greatVibes = Great_Vibes({
+  subsets: ['latin'], // Select the character subset you need
+  weight: ['400'],    // Specify font weight (default for Great Vibes is 400)
+});
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +21,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        {/* Add global fonts or meta tags */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Great+Vibes&display=swap"
+          rel="stylesheet"
+        /></head>
+      <body className={inter.className }> 
+          {/* Use Great Vibes for specific sections */}
+          {children}
+       </body>
     </html>
   );
 }

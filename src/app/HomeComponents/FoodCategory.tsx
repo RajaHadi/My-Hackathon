@@ -9,7 +9,7 @@ const FoodCategory = () => {
   return (
     <div className="flex flex-col text-white items-center px-6 lg:px-10  lg:py-20">
     {/* Title Section */}
-    <h2 className="text-[#FF9F0D] text-lg font-semibold mb-2">
+    <h2 className="text-[#FF9F0D]  font-greatVibes text-[32px] font-normal mb-2">
       Food Category
     </h2>
     <h1 className="text-3xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-snug text-center pb-5">

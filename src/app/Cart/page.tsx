@@ -31,19 +31,21 @@ export default function ShoppingCart() {
   const shippingCharge = 10.0;
   const totalAmount = subtotal + shippingCharge;
 
-  const removeItem = (id) => {
-    const updatedCart = cartItems.filter((item) => item._id !== id);
+  const removeItem = (id: string) => {
+    const updatedCart = cartItems.filter((item) => item.id !== id);
     setCartItems(updatedCart);
     localStorage.setItem("cart", JSON.stringify(updatedCart)); // Update localStorage
   };
+  
 
-  const updateQuantity = (id, quantity) => {
+  const updateQuantity = (id: string, quantity: number) => {
     const updatedCart = cartItems.map((item) =>
-      item._id === id ? { ...item, quantity: Math.max(1, quantity) } : item
+      item.id === id ? { ...item, quantity: Math.max(1, quantity) } : item
     );
     setCartItems(updatedCart);
     localStorage.setItem("cart", JSON.stringify(updatedCart)); // Update localStorage
   };
+  
 
   return (
     <>
@@ -73,7 +75,7 @@ export default function ShoppingCart() {
                   </thead>
                   <tbody>
                     {cartItems.map((item) => (
-                      <tr key={item._id} className="border-b border-gray-200 text-sm sm:text-base">
+                      <tr key={item.id} className="border-b border-gray-200 text-sm sm:text-base">
                         <td className="p-2 sm:p-4 flex items-center">
                           <img
                             src={item.image || "/placeholder-image.png"}

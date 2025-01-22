@@ -9,7 +9,8 @@ export default function ShoppingCart() {
     id: string;
     name: string;
     price: number;
-    quantity: number; // No need to make this optional as we handle defaults
+    quantity: number; 
+    image?: string;// No need to make this optional as we handle defaults
   };
   
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
@@ -89,7 +90,7 @@ export default function ShoppingCart() {
                           <input
                             type="number"
                             value={item.quantity}
-                            onChange={(e) => updateQuantity(item._id, parseInt(e.target.value, 10))}
+                            onChange={(e) => updateQuantity(item.id, parseInt(e.target.value, 10))}
                             className="border p-1 sm:p-2 w-12 sm:w-16 text-center"
                             min="1"
                           />
@@ -97,7 +98,7 @@ export default function ShoppingCart() {
                         <td className="p-2 sm:p-4">${(item.price * item.quantity).toFixed(2)}</td>
                         <td
                           className="p-2 sm:p-4 text-red-500 cursor-pointer"
-                          onClick={() => removeItem(item._id)}
+                          onClick={() => removeItem(item.id)}
                         >
                           X
                         </td>

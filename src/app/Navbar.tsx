@@ -89,7 +89,7 @@ const Navbar = () => {
           <Link href={""}>
             <Image src={N2} alt="icon2" width={24} height={24} />
           </Link>
-          <Link href={"../CheckOut"}>
+          <Link href={"../Cart"}>
             <Image src={N3} alt="icon3" width={24} height={24} />
           </Link>
         </div>
@@ -137,7 +137,7 @@ const Navbar = () => {
             <Link href={""}>
               <Image src={N2} alt="icon2" width={24} height={24} />
             </Link>
-            <Link href={"../CheckOut"}>
+            <Link href={"../Cart"}>
               <Image src={N3} alt="icon3" width={24} height={24} />
             </Link>
           </div>

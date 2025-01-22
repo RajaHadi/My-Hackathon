@@ -35,7 +35,7 @@ export default function HeroSection() {
             placeholder="Search..."
             className="px-4 py-2 rounded-full bg-gray-800 text-gray-300 border-2 border-[#FF9F0D] focus:ring-2 focus:ring-yellow-400 focus:outline-none"
           />
-          <Link href={"../CheckOut"} className="text-yellow-400 hover:text-yellow-500">
+          <Link href={"../Cart"} className="text-yellow-400 hover:text-yellow-500">
             <Image src={HandBag} width={24} height={24} alt="no" />
           </Link>
         </div>

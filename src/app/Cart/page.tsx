@@ -5,18 +5,27 @@ import Navbar from "../Navbar";
 import { useState, useEffect } from "react";
 
 export default function ShoppingCart() {
-  const [cartItems, setCartItems] = useState([]);
-
+  type CartItem = {
+    id: string;
+    name: string;
+    price: number;
+    quantity: number; // No need to make this optional as we handle defaults
+  };
+  
+  const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  
   useEffect(() => {
     // Fetch cart items from localStorage on component mount
     const savedCart = localStorage.getItem("cart");
-    const parsedCart = savedCart ? JSON.parse(savedCart) : []; // Handle null case
+    const parsedCart: CartItem[] = savedCart ? JSON.parse(savedCart) : []; // Handle null case
     const initializedCart = parsedCart.map((item) => ({
       ...item,
       quantity: item.quantity || 1, // Default quantity to 1 if not present
     }));
     setCartItems(initializedCart);
   }, []);
+  
+  
   
   const subtotal = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
   const shippingCharge = 10.0;

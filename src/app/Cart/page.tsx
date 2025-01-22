@@ -9,14 +9,15 @@ export default function ShoppingCart() {
 
   useEffect(() => {
     // Fetch cart items from localStorage on component mount
-    const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
-    const initializedCart = savedCart.map((item) => ({
+    const savedCart = localStorage.getItem("cart");
+    const parsedCart = savedCart ? JSON.parse(savedCart) : []; // Handle null case
+    const initializedCart = parsedCart.map((item) => ({
       ...item,
       quantity: item.quantity || 1, // Default quantity to 1 if not present
     }));
     setCartItems(initializedCart);
   }, []);
-
+  
   const subtotal = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
   const shippingCharge = 10.0;
   const totalAmount = subtotal + shippingCharge;

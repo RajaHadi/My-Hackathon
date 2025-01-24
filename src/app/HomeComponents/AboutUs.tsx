@@ -3,6 +3,7 @@ import React from 'react'
 import Image1 from "../../../public/AboutUsImages/unsplash_fdlZBWIP0aM.png"
 import Image2 from "../../../public/AboutUsImages/unsplash_jpkfc5_d-DI.png"
 import Image3 from "../../../public/AboutUsImages/unsplash_mAQZ3X_8_l0.png"
+import Link from 'next/link'
 const AboutUs = () => {
   return (
     <div className='pb-6'>
@@ -16,9 +17,10 @@ const AboutUs = () => {
       <p className="mt-4 text-gray-400">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae in facilis modi iure suscipit sed, praesentium sit repellendus neque quidem aspernatur illo ut quas quo laudantium cumque expedita hic dolores?
       </p>
+      <Link href={"../Shop"}>
       <button className="mt-6 px-6 py-3 bg-[#FF9F0D] text-black font-semibold rounded-[30px] hover:bg-yellow-500">
         See Menu
-      </button>
+      </button></Link>
     </div>
 
     {/* Images Section */}

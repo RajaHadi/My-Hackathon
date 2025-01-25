@@ -7,6 +7,9 @@ import N2 from "../../public/NavbarIcons/User.png"
 import N3 from "../../public/NavbarIcons/Handbag.png"
 import { useState } from "react";
 
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs'
+
+
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -17,6 +20,26 @@ const Navbar = () => {
 
   return (
     <nav className="bg-black text-white px-6 py-4">
+        <SignedOut>
+                  
+                  <SignInButton>
+                  <button
+                            className="px-4 py-1 bg-[rgb(255,159,13)] text-white font-semibold rounded-lg shadow-md hover:bg-[rgb(255,135,24)] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all"
+                        >
+                            Sign In
+                        </button>
+                  </SignInButton>
+                  </SignedOut>
+                  <SignedIn>
+                    <UserButton 
+                     appearance={{
+                      elements: {
+                          userButtonTrigger:
+                              "px-3  bg-[rgb(255,159,13)] text-white font-medium rounded hover:bg-[rgb(255,135,24)] transition",
+                      },
+                  }}
+                    />
+                  </SignedIn>
       <div className="flex items-center justify-between">
         {/* Logo Section */}
         <div className="text-3xl font-bold">

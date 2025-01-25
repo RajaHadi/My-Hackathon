@@ -1,3 +1,10 @@
+import {
+  ClerkProvider,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Great_Vibes } from "next/font/google";
@@ -20,6 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <ClerkProvider>
     <html lang="en">
       <head>
         {/* Add global fonts or meta tags */}
@@ -32,5 +40,6 @@ export default function RootLayout({
           {children}
        </body>
     </html>
+    </ClerkProvider>
   );
 }

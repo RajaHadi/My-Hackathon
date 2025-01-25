@@ -11,7 +11,7 @@ import wine from "../../../public/ChooseUs/Wine.png"
 import cookie from "../../../public/ChooseUs/Cookie.png"
 const ChooseUs = () => {
   return (
-    <div className='flex flex-col text-white lg:flex-row justify-between px-6 lg:px-10  lg:py-20'>
+    <div className='flex flex-col text-white lg:flex-row justify-between px-6 lg:px-0  lg:py-20'>
     <div className='flex flex-col gap-6'>
       <div className='flex flex-col sm:flex-row gap-6'>
         <Image src={img1} alt='no' width={362} height={356} className='h-auto w-full sm:w-[362px]' />

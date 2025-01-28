@@ -54,6 +54,7 @@ export default function Checkout() {
             <form>
               <div className="grid grid-cols-2 gap-4">
                 <input
+                required
                   type="text"
                   placeholder="First name"
                   className="border border-gray-300 p-3 rounded-lg w-full"
@@ -65,16 +66,19 @@ export default function Checkout() {
                 />
               </div>
               <input
+              required
                 type="email"
                 placeholder="Email address"
                 className="border border-gray-300 p-3 rounded-lg w-full mt-4"
               />
               <input
+              required
                 type="text"
                 placeholder="Phone number"
                 className="border border-gray-300 p-3 rounded-lg w-full mt-4"
               />
               <input
+              required
                 type="text"
                 placeholder="Company"
                 className="border border-gray-300 p-3 rounded-lg w-full mt-4"
@@ -82,13 +86,13 @@ export default function Checkout() {
               <div className="grid grid-cols-2 gap-4 mt-4">
                 <select className="border border-gray-300 p-3 rounded-lg w-full">
                   <option>Choose country</option>
-                  <option>USA</option>
-                  <option>India</option>
+                  
+                  <option>Pakistan</option>
                 </select>
                 <select className="border border-gray-300 p-3 rounded-lg w-full">
                   <option>Choose city</option>
-                  <option>New York</option>
-                  <option>Mumbai</option>
+                 
+                  <option>Karachi</option>
                 </select>
               </div>
               <div className="grid grid-cols-2 gap-4 mt-4">

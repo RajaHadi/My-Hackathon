@@ -106,7 +106,7 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="container mx-auto px-4 mt-8 text-center border-t border-gray-700 pt-4">
         <p className="text-sm">
-          Copyright © 2022 by Ayeman All Rights Reserved.
+          Copyright © 2025 by Food Tuck All Rights Reserved.
         </p>
       </div>
     </footer>

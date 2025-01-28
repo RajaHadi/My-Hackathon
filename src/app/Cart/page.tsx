@@ -7,36 +7,51 @@ import { useState, useEffect } from "react";
 export default function ShoppingCart() {
   type CartItem = {
     id: string;
+    _id?: string;
     name: string;
     price: number;
     quantity: number; 
-    image?: string;// No need to make this optional as we handle defaults
+    image?: string;
   };
   
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   
   useEffect(() => {
-    // Fetch cart items from localStorage on component mount
     const savedCart = localStorage.getItem("cart");
-    const parsedCart: CartItem[] = savedCart ? JSON.parse(savedCart) : []; // Handle null case
+    const parsedCart: CartItem[] = savedCart ? JSON.parse(savedCart) : [];
+    
+    // Map _id to id if _id exists
     const initializedCart = parsedCart.map((item) => ({
       ...item,
-      quantity: item.quantity || 1, // Default quantity to 1 if not present
+      id: item._id || item.id, 
+      quantity: item.quantity || 1,
     }));
+  
+    console.log("Initialized cart items:", initializedCart); 
     setCartItems(initializedCart);
   }, []);
+  
   
   
   
   const subtotal = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
   const shippingCharge = 10.0;
   const totalAmount = subtotal + shippingCharge;
-
   const removeItem = (id: string) => {
+    console.log("Removing item with id:", id); 
+    if (!id) {
+      console.error("Item id is missing or invalid.");
+      return;
+    }
+    
     const updatedCart = cartItems.filter((item) => item.id !== id);
+    console.log("Updated cart items:", updatedCart); 
+    
     setCartItems(updatedCart);
-    localStorage.setItem("cart", JSON.stringify(updatedCart)); // Update localStorage
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
+  
+  
   
 
   const updateQuantity = (id: string, quantity: number) => {
@@ -44,7 +59,7 @@ export default function ShoppingCart() {
       item.id === id ? { ...item, quantity: Math.max(1, quantity) } : item
     );
     setCartItems(updatedCart);
-    localStorage.setItem("cart", JSON.stringify(updatedCart)); // Update localStorage
+    localStorage.setItem("cart", JSON.stringify(updatedCart)); 
   };
   
 
@@ -75,36 +90,37 @@ export default function ShoppingCart() {
                     </tr>
                   </thead>
                   <tbody>
-                    {cartItems.map((item) => (
-                      <tr key={item.id} className="border-b border-gray-200 text-sm sm:text-base">
-                        <td className="p-2 sm:p-4 flex items-center">
-                          <img
-                            src={item.image || "/placeholder-image.png"}
-                            alt={item.name}
-                            className="w-12 h-12 sm:w-16 sm:h-16 rounded-md mr-2 sm:mr-4"
-                          />
-                          <span className="truncate max-w-[200px] md:max-w-none">{item.name}</span>
-                        </td>
-                        <td className="p-2 sm:p-4">${item.price.toFixed(2)}</td>
-                        <td className="p-2 sm:p-4">
-                          <input
-                            type="number"
-                            value={item.quantity}
-                            onChange={(e) => updateQuantity(item.id, parseInt(e.target.value, 10))}
-                            className="border p-1 sm:p-2 w-12 sm:w-16 text-center"
-                            min="1"
-                          />
-                        </td>
-                        <td className="p-2 sm:p-4">${(item.price * item.quantity).toFixed(2)}</td>
-                        <td
-                          className="p-2 sm:p-4 text-red-500 cursor-pointer"
-                          onClick={() => removeItem(item.id)}
-                        >
-                          X
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
+  {cartItems.map((item, index) => (
+    <tr key={item.id || index} className="border-b border-gray-200 text-sm sm:text-base">
+      <td className="p-2 sm:p-4 flex items-center">
+        <img
+          src={item.image || "/placeholder-image.png"}
+          alt={item.name}
+          className="w-12 h-12 sm:w-16 sm:h-16 rounded-md mr-2 sm:mr-4"
+        />
+        <span className="truncate max-w-[200px] md:max-w-none">{item.name}</span>
+      </td>
+      <td className="p-2 sm:p-4">${item.price.toFixed(2)}</td>
+      <td className="p-2 sm:p-4">
+        <input
+          type="number"
+          value={item.quantity}
+          onChange={(e) => updateQuantity(item.id, parseInt(e.target.value, 10))}
+          className="border p-1 sm:p-2 w-12 sm:w-16 text-center"
+          min="1"
+        />
+      </td>
+      <td className="p-2 sm:p-4">${(item.price * item.quantity).toFixed(2)}</td>
+      <td
+        className="p-2 sm:p-4 text-red-500 cursor-pointer"
+        onClick={() => removeItem(item.id)}
+      >
+        X
+      </td>
+    </tr>
+  ))}
+</tbody>
+
                 </table>
               </div>
 
@@ -134,7 +150,8 @@ export default function ShoppingCart() {
                     <span>Total Amount:</span>
                     <span>${totalAmount.toFixed(2)}</span>
                   </div>
-                  <Link href={"./CheckOut"}>
+                  <Link href={"./CheckOut"}
+                    onClick={() => localStorage.setItem("checkoutCart", JSON.stringify(cartItems))}>
                   <button className="mt-4 w-full bg-[#FF9F0D] text-white py-2 rounded-md text-sm sm:text-base">
                     Proceed to Checkout
                   </button></Link>

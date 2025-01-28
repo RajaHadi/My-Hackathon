@@ -1,7 +1,7 @@
  'use client';
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation'; // For navigation
-import { client } from '../../sanity/lib/client'; // Adjust path as necessary
+import { useRouter } from 'next/navigation'; 
+import { client } from '../../sanity/lib/client'; 
 import imageUrlBuilder from '@sanity/image-url';
 import Image from 'next/image';
 
@@ -14,7 +14,7 @@ const Main = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [error, setError] = useState<string | null>(null);
-  const router = useRouter(); // Router instance for navigation
+  const router = useRouter(); 
 
   useEffect(() => {
     // Fetch food data from Sanity
@@ -36,7 +36,7 @@ const Main = () => {
         setError(null);
       } catch (err) {
         console.error("Failed to fetch data:", err);
-        setFoods([]); // Set empty array to avoid rendering issues
+        setFoods([]);
         setError("An error occurred while fetching the data. Please try again later.");
       }
     };
@@ -45,7 +45,7 @@ const Main = () => {
   }, []);
 
   const handleCardClick = (id: any) => {
-    router.push(`/Shop/${id}`); // Navigate to the product detail page
+    router.push(`/Shop/${id}`); 
   };
 
   const handleCategoryChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -103,7 +103,7 @@ const Main = () => {
                   <div
                     key={food._id}
                     className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer"
-                    onClick={() => handleCardClick(food._id)} // Navigate on card click
+                    onClick={() => handleCardClick(food._id)} 
                   >
                     <Image
                       src={urlFor(food.image).toString()}

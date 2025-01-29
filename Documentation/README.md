@@ -1,6 +1,3 @@
-GITHUB REPOSITORY LINK:"https://github.com/RajaHadi/My-Hackathon", Sir I mistakely  created this Repository for Documentation the link i provided is my hackathon repo.
-
-
 Hackathon Project: Q-Commerce Food Restaurant Platform
 
 This document provides a summary of all project activities, including deployment steps, test case results, and features implemented during the hackathon.

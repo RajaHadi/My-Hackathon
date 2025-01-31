@@ -1,0 +1,7 @@
+Test Case Id,Test Case Description,,   Test steps,,Expected Result,,Actual Result,,Status,Remarks
+TC001,Product Listing,,Opened Shop Page,,Product Displayed ,,Products Displayed,,Passed,Handled Easily
+TC002,Product Detail,,Click On Product,,Details Showed,,Details Showed,,Passed,No issues Found
+TC003,Add to cart,, Add Food to cart ,,Food comes at cart,,Food Showed in cart,,Passed,Worked As Expected
+TC004,Api error Handling,,Disconnected Api,,FallBack Ui Error,,Error Comes,,Passed,No issues Found
+,,,,,,,,,,
+TC005,Resposiveness,,Resizing Browser,,Should Responsive,,Shows responsivenes,,Passed,Worked Fine

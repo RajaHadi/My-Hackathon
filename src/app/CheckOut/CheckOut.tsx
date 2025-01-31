@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import { useRouter } from 'next/navigation';
 type CartItem = {
   id: string;
   name: string;
@@ -14,6 +14,7 @@ type CartItem = {
 export default function Checkout() {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [subtotal, setSubtotal] = useState(0);
+  const router = useRouter();
 
   useEffect(() => {
     const savedCart = localStorage.getItem('cart');
@@ -43,6 +44,21 @@ export default function Checkout() {
   const discountedSubtotal = subtotal * (1 - discount);
   const tax = discountedSubtotal * taxRate;
   const total = discountedSubtotal + tax + shippingCost;
+  const handlePlaceOrder = () => {
+    // Calculate the total amount
+    const shippingCost = 0;
+    const discount = 0.25;
+    const taxRate = 0.1;
+    const discountedSubtotal = subtotal * (1 - discount);
+    const tax = discountedSubtotal * taxRate;
+    const total = discountedSubtotal + tax + shippingCost;
+  
+    // Round to 2 decimal places (dollars) and convert to cents
+    const totalInCents = Math.round(total * 100);
+  
+    // Redirect to the payment page with the total amount in cents
+    router.push(`/payment?amount=${totalInCents}`);
+  };
 
   return (
     <div className="min-h-screen bg-gray-100 flex py-16 items-center justify-center p-6">
@@ -174,7 +190,8 @@ export default function Checkout() {
             </div>
 
             {/* Action Buttons */}
-            <button className="bg-[#FF9F0D] text-white py-2 px-6 rounded-lg w-full mt-6">
+            
+            <button onClick={handlePlaceOrder} className="bg-[#FF9F0D] text-white py-2 px-6 rounded-lg w-full mt-6">
               Place an order
             </button>
           </div>

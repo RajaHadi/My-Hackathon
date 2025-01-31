@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import { Elements, CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import { useRouter, useSearchParams } from 'next/navigation';
@@ -7,7 +7,8 @@ import { useRouter, useSearchParams } from 'next/navigation';
 // Load Stripe.js
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
 
-const PaymentForm = () => {
+// Wrapper component for useSearchParams
+function PaymentFormContent() {
   const stripe = useStripe();
   const elements = useElements();
   const router = useRouter();
@@ -113,12 +114,15 @@ const PaymentForm = () => {
       </div>
     </div>
   );
-};
+}
 
+// Main component with Suspense boundary
 export default function PaymentPage() {
   return (
     <Elements stripe={stripePromise}>
-      <PaymentForm />
+      <Suspense fallback={<div>Loading...</div>}>
+        <PaymentFormContent />
+      </Suspense>
     </Elements>
   );
 }

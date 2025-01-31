@@ -2,8 +2,10 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 
-export default function OrderConfirmationPage() {
+// Wrapper component for useSearchParams
+function OrderConfirmationContent() {
   const searchParams = useSearchParams();
   const amount = searchParams.get('amount');
   const [orderId, setOrderId] = useState<string | null>(null);
@@ -32,5 +34,14 @@ export default function OrderConfirmationPage() {
         </Link>
       </div>
     </div>
+  );
+}
+
+// Main component with Suspense boundary
+export default function OrderConfirmationPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <OrderConfirmationContent />
+    </Suspense>
   );
 }
